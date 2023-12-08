@@ -6,7 +6,7 @@ class StoryForm(ModelForm):
     class Meta:
         model = NewsStory
         # removed 'author'
-        fields = ['title', 'pub_date', 'content']
+        fields = ['title', 'pub_date', 'content', 'image_url']
         widgets = {
             'pub_date': forms.DateInput(
                 format='%m/%d/%Y',
