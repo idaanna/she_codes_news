@@ -1,4 +1,6 @@
 from django.views import generic
+# is below required as it was not for createview?
+from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import NewsStory
 from .forms import StoryForm
@@ -32,3 +34,16 @@ class AddStoryView(generic.CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form)
         
+# ida adding edit view
+class AddEditView(generic.UpdateView):
+    form_class = StoryForm
+    context_object_name = 'storyform'
+    template_name = 'news/createStory.html'
+    success_url = reverse_lazy('news:index')
+
+class AddDeleteView(generic.DeleteView):
+    form_class = StoryForm
+    context_object_name = 'storyform'
+    template_name = 'news/createStory.html'
+    success_url = reverse_lazy('news:index')
+
