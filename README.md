@@ -18,13 +18,25 @@ number 1 at the top of your keyboard.)
 ## Database Schema
 ![ {{ My ERD }} ]( {{ ./relative_path_to_your_entity_relationship_diagram }} )
 ## Project Features
+- [x] A form for adding new stories
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
+- [x] Users app: create account, login, logout
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
 - [x] Order stories by date
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
 - [ ] Styled "new story" form
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
+- [ ] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
 - [ ] Story images
+![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
+- [ ] Account view so authors can see their profile information
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
 - [x] Log-in/log-out
@@ -45,12 +57,13 @@ only visible when a user *is* logged in
 
 - [x] "Create Story" functionality only available when user is logged in
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+
 ## Additional Features:
 - [ ] Add categories to the stories and allow the user to search for stories by
 category.
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 - [ ] Add the ability to update and delete stories (consider permissions - who
-should be allowed to update or and/or delete stories).
+should be allowed to update or and/or delete stories). - Django's UpdateView and DeleteView classes
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 - [ ] Add the ability to “favourite” stories and see a page with your favourite
 stories.

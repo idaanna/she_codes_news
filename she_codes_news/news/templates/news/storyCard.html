@@ -11,8 +11,9 @@
             <h3>{{ story.title }}</h3>
             <h4>{{ story.author }}</h4>
             <h4>{{ story.pub_date }}</h4>
-            <a href="{% url 'news:editStory' %}">Edit Story</a>
-            <a href="{% url 'news:deleteStory' %}">Delete Story</a>
+            <!-- create if statement is authenticated and a superuser  -->
+            <a href="{% url 'news:editStory' story.id %}">Edit Story</a> 
+            <a href="{% url 'news:deleteStory' story.id %}">Delete Story</a>
         </div>
     </a>
 </div>

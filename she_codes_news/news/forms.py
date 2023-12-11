@@ -8,12 +8,12 @@ class StoryForm(ModelForm):
         # removed 'author'
         fields = ['title', 'pub_date', 'content', 'image_url']
         widgets = {
-            'pub_date': forms.DateInput(
-                format='%m/%d/%Y',
+            'pub_date': forms.DateTimeInput(
+                format='%d/%m/%Y %H:%M',
                 attrs={
                     'class': 'form-control',
                     'placeholder': 'Select a date',
-                    'type': 'date'
+                    'type': 'datetime-local'
                 }
             )
         }

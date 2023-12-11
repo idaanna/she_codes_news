@@ -4,6 +4,7 @@ from django.views.generic.edit import UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import NewsStory
 from .forms import StoryForm
+from users.models import CustomUser
 
 
 class IndexView(generic.ListView):
@@ -35,15 +36,26 @@ class AddStoryView(generic.CreateView):
         return super().form_valid(form)
         
 # ida adding edit view
-class AddEditView(generic.UpdateView):
+class EditView(generic.UpdateView):
+    model = NewsStory
     form_class = StoryForm
     context_object_name = 'storyform'
     template_name = 'news/createStory.html'
     success_url = reverse_lazy('news:index')
 
-class AddDeleteView(generic.DeleteView):
+class DeleteView(generic.DeleteView):
+    model = NewsStory
     form_class = StoryForm
     context_object_name = 'storyform'
     template_name = 'news/createStory.html'
     success_url = reverse_lazy('news:index')
 
+# ida adding detailview for author search
+class AuthorView(generic.DetailView):
+    template_name = 'news/authorView.html'
+    model = CustomUser
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['stories'] = NewsStory.objects.filter(author= self.object.id )
+        return context

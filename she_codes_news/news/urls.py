@@ -7,6 +7,10 @@ urlpatterns = [
     path('', views.IndexView.as_view(), name='index'),
     path('<int:pk>/', views.StoryView.as_view(), name='story'),
     path('add-story/', views.AddStoryView.as_view(), name='newStory'),
-    path('edit-story/', views.AddEditView.as_view(), name='editStory'),
-    path('delete-story/', views.AddDeleteView.as_view(), name='deleteStory'),
+    path('<int:pk>/edit-story/', views.EditView.as_view(), name='editStory'),
+    path('<int:pk>/delete-story/', views.DeleteView.as_view(), name='deleteStory'),
+    path('<int:pk>/author-view/', views.AuthorView.as_view(), name='authorview'),
+
 ]
+
+# <int:slug>
