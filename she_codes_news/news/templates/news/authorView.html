@@ -19,4 +19,14 @@
     </div>
 </div>
 
+<div id="latest-stories">
+    {% if latest_stories %}
+        {% for story in latest_stories %}
+            {% include './StoryCard.html' with story=story position=forloop.counter %}
+        {% endfor %}
+    {% else %}
+        <p>No stories are available.</p>
+    {% endif %}
+</div>
+
 {% endblock %}
