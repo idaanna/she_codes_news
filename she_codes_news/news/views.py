@@ -1,3 +1,5 @@
+from typing import Any
+from django.db import models
 from django.views import generic
 # is below required as it was not for createview?
 from django.views.generic.edit import UpdateView, DeleteView
@@ -5,6 +7,7 @@ from django.urls import reverse_lazy
 from .models import NewsStory
 from .forms import StoryForm
 from users.models import CustomUser
+from django.shortcuts import get_object_or_404
 
 
 class IndexView(generic.ListView):
@@ -40,22 +43,43 @@ class EditView(generic.UpdateView):
     model = NewsStory
     form_class = StoryForm
     context_object_name = 'storyform'
-    template_name = 'news/createStory.html'
+    template_name = 'news/editView.html'
     success_url = reverse_lazy('news:index')
 
 class DeleteView(generic.DeleteView):
     model = NewsStory
     form_class = StoryForm
     context_object_name = 'storyform'
-    template_name = 'news/createStory.html'
+    template_name = 'news/deleteView.html'
     success_url = reverse_lazy('news:index')
 
-# ida adding detailview for author search
-class AuthorView(generic.DetailView):
-    template_name = 'news/authorView.html'
-    model = CustomUser
+    def DeleteView(self, request, *args, **kwargs):
+        return super().delete(request, *args, **kwargs)
 
+
+
+# ida adding detailview for author search
+# with Bernardo
+# class AuthorView(generic.DetailView):
+#     template_name = 'news/authorView.html'
+#     model = CustomUser
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['stories'] = NewsStory.objects.filter(author= self.object.id )
+#         return context
+
+# detailview from Rebecca's class
+class AuthorView(generic.DetailView):
+    model = CustomUser
+    template_name = 'news/authorView.html'
+    context_object_name = 'author'
+
+    def get_object(self, *args, **kwargs):
+        return get_object_or_404(CustomUser,
+        username=self.kwargs['username'])
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['stories'] = NewsStory.objects.filter(author= self.object.id )
+        context['latest_stories'] = NewsStory.objects.filter(author__id=self.object.id)
         return context

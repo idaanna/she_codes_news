@@ -10,12 +10,33 @@
     <h2>{{ story.title }}</h2>
     <h4>{{ story.author }}</h4>
     <div id="story-content">
+        {% if story.image %}
+        <img src="{{ story.image }}">
+        {% else %}
+            <!-- <img src="{% static '/news/images/placeholder-2.jpg' %}"> -->
+        {% endif %}
+        {{ story.content|linebreaks }}
+
+<!--         
         <img src="{% static '/news/images/placeholder-5.jpg' %}">
         {{ story.content|linebreaks }}
         <a href="{% url 'news:editStory' story.id %}">Edit Story</a>
-        <a href="{% url 'news:deleteStory' story.id %}">Delete Story</a>
+        <a href="{% url 'news:deleteStory' story.id %}">Delete Story</a> -->
     </div>
 </div>
 
 {% endblock %}
 
+<!-- add if & and statement for user authenticated and super user -->
+<!-- <div id=“story-wrapper”>
+    <h2>{{ story.title }}</h2>
+    <h4>{{ story.author }}</h4>
+    <div id=“story-content”>
+        {% if story.image %}
+        <img src=“{{ story.image }}“>
+        {% else %}
+
+        {% endif %}
+        {{ story.content|linebreaks }}
+    </div> -->
+<!-- </div> -->
