@@ -8,6 +8,7 @@ from .models import NewsStory
 from .forms import StoryForm
 from users.models import CustomUser
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class IndexView(generic.ListView):
@@ -28,7 +29,7 @@ class StoryView(generic.DetailView):
     template_name = 'news/story.html'
     context_object_name = 'story'
 
-class AddStoryView(generic.CreateView):
+class AddStoryView(LoginRequiredMixin,generic.CreateView):
     form_class = StoryForm
     context_object_name = 'storyform'
     template_name = 'news/createStory.html'
@@ -39,7 +40,7 @@ class AddStoryView(generic.CreateView):
         return super().form_valid(form)
         
 # ida adding edit view
-class EditView(generic.UpdateView):
+class EditView(LoginRequiredMixin,generic.UpdateView):
     model = NewsStory
     form_class = StoryForm
     context_object_name = 'storyform'
