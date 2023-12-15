@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static styles.css %}"> 
+{% endblock %}
+
+<h2>My Profile</h2>
+
+
+{% block content %}
+    <div> 
+        <section class="profile_container">
+            {% if request.user.is_authenticated %}
+                <div class = "profile_information">
+                    <h2>Profile Information </h2>
+                    <h4>Username: {{ request.user.username}} </h4>
+                    <h4>Last Login:  {{request.user.last_login}} </h4>
+                    <h4>Member Since: {{request.user.date_joined}}</h4>
+                </div>
+        
+
+<!--                 
+                <div id="user-stories">
+                    <h2>{{ request.user.username }}'s Stories</h2>
+                    {% if author_stories  %}
+                        {% for story in author_stories  %}
+                            {% include "news/storyCard.html" with story=story position=forloop.counter %}
+                        {% endfor %}
+                     {% else %}
+                        <p>No stories are available.</p>
+                     {% endif %}
+                     {{author.stories| linebreaks }}
+                </div>    -->
+                
+            {% else %}
+                <h2>Please log in to view your Profile </h2>
+        </section>
+        
+        
+
+
+        
+            {% endif %}
+    </div>
+   
+{% endblock %}
