@@ -13,8 +13,9 @@
     <a href="{% url 'login' %}">Please log in to write a story</a> 
 {% endif %}
     
-
+<section>
 <h2>Latest News</h2>
+
 
 <div id="latest-stories">
     {% if latest_stories %}
@@ -25,8 +26,16 @@
         <p>No stories are available.</p>
     {% endif %}
 </div>
+</section>
+
+<section>
+<div>
+    <h3>All Stories</h3>
+</div>
+
 
 <div id="all-stories">
+
     {% if latest_stories %}
         {% for story in all_stories %}
             {% include './StoryCard.html' with story=story position=forloop.counter %}
@@ -35,4 +44,5 @@
         <p>No stories are available.</p>
     {% endif %}
 </div>
+</section>
 {% endblock %}
