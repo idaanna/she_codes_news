@@ -13,7 +13,7 @@ The purpose of this project was to create a She Codes News site in Django. The s
     7. Have fun and try to not loose your shit 
     8. Don't forget that you have to make migrations as soon as you chnage something in your models 
 ## Database Schema
-! An overview of my database ( ./project_img/Database%20Schema.png )
+An overview of my database ( ![Alt text](<project_img/Database Schema.png>) )
 ## Project Features
 - [x] A form for adding new stories
 ![ A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added ]( project_img\A form for adding new stories.png. )
