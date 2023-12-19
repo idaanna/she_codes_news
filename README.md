@@ -4,78 +4,59 @@
 ## About This Project
 {{ The purpose of this project was to create a She Codes News site in Django. The starter code was provided and then it was up to the cohort to build on this code and create their own site. Inspiration was drawn from a standard newssite but the purpose was to use Django to make it dynamic and give it some personality and flair.  }}
 ## How To Run This Code
-{{
-Give a quick step-by-step guide on how to download and run your codebase.
-It's ok to assume the reader is another developer here, so don't feel like you
-have to explain what a virtual environment is, etc.
-Give directions like "clone the repo to your local machine", "create a virtual
-environment", "migrate the database", etc.
-When you need to specify terminal commands, you can surround them with
-backticks, like so: `python manage.py runserver`. This formats them as
-code in the markdown document. (The backtick key is to the left of the
-number 1 at the top of your keyboard.)
-}}
+{{  1. Clone the repo to your local machine, the repo can be found here; SheCodesAus/plus-django-news-project-template. 
+    2. Navigate to the folder where you want to start your project and run 'git clone' in your terminal.
+    3. To ensure you always run your project on the same Django release set up your virtual environment
+    4. install pip
+    5. make yourself familiar with the folders and code
+    6. upload your code to your repo as soon as you make any changes
+    7. Have fun and try to not loose your shit 
+    8. Don't forget that you have to make migrations as soon as you chnage something in your models }}
+
 ## Database Schema
 ![ {{ My ERD }} ]( {{ ./relative_path_to_your_entity_relationship_diagram }} )
 ## Project Features
 - [x] A form for adding new stories
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![ {{ A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added }} ]( {{ project_img\A form for adding new stories.png. }} )
 
 - [x] Users app: create account, login, logout
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![ {{ Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story }} ]( {{ project_img\Nav Menu when logged out.png. }} )
+
+![ {{ Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article }} ]( {{ project_img\Nav Menu when logged in.png. }} )
+
+![ {{ Create account view shows the standard Django view and this is where the link 'create account' takes the user }} ]( {{ project_img\Creat Account View.png }} )
 
 - [x] Order stories by date
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![ {{ Image shows how the newest story is in storycard-1 and older stories are filtered based on date and time they were published }} ]( {{ project_img\Order stories by date.png }} )
 
-- [ ] Styled "new story" form
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+- [x] Styled "new story" form
+![ {{ See 'A form for adding new stories' point above }} ]( {{ project_img\A form for adding new stories.png. }} )
 
-- [ ] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+- [x] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter
+![ {{ When creating a story this form has had 'add image URL' added to it }} ]( {{ project_img\A form for adding new stories.png }} )
 
-- [ ] Story images
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+- [x] View stories by a particular author
+![ {{ In view stories by a particular author it is possible to see all the stories published by the same author. You access this view by clicking the authors name }} ]( {{ project_img\View stories by author.png }} )
 
-- [ ] Account view so authors can see their profile information
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+- [x] Account view so authors can see their profile information
+![ {{ This is access by the 'my profile' line in the nav bar. The user can see their profile infromation including user name, last login and member since. }} ]( {{ project_img\Account View.png }} )
 
-- [x] Log-in/log-out
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
-- [ ] "Account view" page
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
-- [x] "Create Account" page
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-
-- [ ] View stories by author
+- [x] Show/Hide the relevant information and buttons based on whether the user is logged in/out (e.g. should only be able to see the button to create a new story if I am logged in)
 ![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
 - [x] "Log-in" button only visible when no user is logged in/"Log-out" button
 only visible when a user *is* logged in
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![ {{ In the nav bar different options are visible depending on if the user is logged in or logged out. It also says 'please log in to write a story' if you are not logged in, this changes once the user is logged in }} ]( {{ C:\Users\Owner\she_codes\she_codes_news\project_img\Nav Menu when logged in.png, project_img\Nav Menu when logged out.png }} )
 
-- [x] "Create Story" functionality only available when user is logged in
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
 
 ## Additional Features:
-- [ ] Add categories to the stories and allow the user to search for stories by
-category.
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-- [ ] Add the ability to update and delete stories (consider permissions - who
+- [x] Add the ability to update and delete stories (consider permissions - who
 should be allowed to update or and/or delete stories). - Django's UpdateView and DeleteView classes
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-- [ ] Add the ability to “favourite” stories and see a page with your favourite
-stories.
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-- [ ] Our form for creating stories requires you to add the publication date,
-update this to automatically save the publication date as the day the
-story was first published (maybe you could then add a field to show
-when the story was updated).
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
-[ ] Gracefully handle the error where someone tries to create a new story when
+![ {{ When an author is logged in they can delete their own stories }} ]( {{ project_img\Edit delete story when logged in.png }} )
+
+[x] Gracefully handle the error where someone tries to create a new story when
 they are not logged in.
-![ {{ Description of image }} ]( {{ ./relative_path_to_image_file }} )
+![ {{ The page says 'please log in to write a story', if the user clicks that link it will take them to the log in page where they also have the option to create an account }} ]( {{ project_img\log in link from create story.png, project_img\Log in to write a story.png,  }} )
 
 <!-- Ida's notes
 1. I have added a message when the user is not logged in it says 'Please log in to write a story' and this sentence is also a link to the log in page -->
