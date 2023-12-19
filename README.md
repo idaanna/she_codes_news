@@ -2,25 +2,24 @@
 
 # {{ Ida Eriksson }} - She Codes News Project
 ## About This Project
-{{ The purpose of this project was to create a She Codes News site in Django. The starter code was provided and then it was up to the cohort to build on this code and create their own site. Inspiration was drawn from a standard newssite but the purpose was to use Django to make it dynamic and give it some personality and flair.  }}
+The purpose of this project was to create a She Codes News site in Django. The starter code was provided and then it was up to the cohort to build on this code and create their own site. Inspiration was drawn from a standard newssite but the purpose was to use Django to make it dynamic and give it some personality and flair. 
 ## How To Run This Code
-{{  1. Clone the repo to your local machine, the repo can be found here; SheCodesAus/plus-django-news-project-template. 
+ 1. Clone the repo to your local machine, the repo can be found here; SheCodesAus/plus-django-news-project-template. 
     2. Navigate to the folder where you want to start your project and run 'git clone' in your terminal.
     3. To ensure you always run your project on the same Django release set up your virtual environment
     4. install pip
     5. make yourself familiar with the folders and code
     6. upload your code to your repo as soon as you make any changes
     7. Have fun and try to not loose your shit 
-    8. Don't forget that you have to make migrations as soon as you chnage something in your models }}
-
+    8. Don't forget that you have to make migrations as soon as you chnage something in your models 
 ## Database Schema
 ![ {{ My ERD }} ]( {{ ./relative_path_to_your_entity_relationship_diagram }} )
 ## Project Features
 - [x] A form for adding new stories
-![ {{ A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added }} ]( {{ project_img\A form for adding new stories.png. }} )
+![ A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added ]( project_img\A form for adding new stories.png. )
 
 - [x] Users app: create account, login, logout
-![ {{ Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story }} ]( {{ project_img\Nav Menu when logged out.png. }} )
+![ Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story ]( project_img\Nav Menu when logged out.png.  )
 
 ![ {{ Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article }} ]( {{ project_img\Nav Menu when logged in.png. }} )
 
