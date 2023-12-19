@@ -18,20 +18,17 @@ An overview of my database ![Alt text](<project_img/Database Schema.png>)
 - [x] A form for adding new stories - A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added
 ![Alt text](<project_img/A form for adding new stories.png>)
 
-- [x] Users app: create account, login, logout
-![Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story ] ( ./ 
-project_img\Nav Menu when logged out.png.  )
+- [x] Users app: create account, login, logout - Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story. Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article. 
+Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story.
+Create account view shows the standard Django view and this is where the link 'create account' takes the user
+![Alt text](<project_img/Nav Menu when logged out.png>)
+( ./project_img/Nav%20Menu%20when%20logged%20in.png )
+( ./project_img/Creat%20Account%20View.png )
 
-- [x]
-![ Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article. ]( ./project_img/Nav%20Menu%20when%20logged%20in.png )
+- [x] Order stories by date - Image shows how the newest story is in storycard-1 and older stories are filtered based on date and time they were published
+![Alt text](<project_img/Order stories by date.png>)
 
-- [x]!Create account view shows the standard Django view and this is where the link 'create account' takes the user ( ./project_img/Creat%20Account%20View.png )
-
-- [x] Order stories by date
-![ Image shows how the newest story is in storycard-1 and older stories are filtered based on date and time they were published ]( project_img\Order stories by date.png )
-
-- [x] Styled "new story" form
-![ See 'A form for adding new stories' point above ]( project_img\A form for adding new stories.png. )
+- [x] Styled "new story" form - See 'A form for adding new stories' point above
 
 - [x] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter
 ![ {{ When creating a story this form has had 'add image URL' added to it }} ]( {{ project_img\A form for adding new stories.png }} )
