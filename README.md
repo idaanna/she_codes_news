@@ -15,8 +15,8 @@ The purpose of this project was to create a She Codes News site in Django. The s
 ## Database Schema
 An overview of my database ![Alt text](<project_img/Database Schema.png>)
 ## Project Features
-- [x] A form for adding new stories
-![ A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added ]( project_img\A form for adding new stories.png. )
+- [x] A form for adding new stories - A form for adding new stories has been styled with new background colour, white text and the time the article is published has been added
+![Alt text](<project_img/A form for adding new stories.png>)
 
 - [x] Users app: create account, login, logout
 ![Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story ] ( ./ 
