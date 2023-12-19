@@ -22,34 +22,37 @@ An overview of my database ![Alt text](<project_img/Database Schema.png>)
 Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story.
 Create account view shows the standard Django view and this is where the link 'create account' takes the user
 ![Alt text](<project_img/Nav Menu when logged out.png>)
-( ./project_img/Nav%20Menu%20when%20logged%20in.png )
-( ./project_img/Creat%20Account%20View.png )
+![Alt text](<project_img/Nav Menu when logged in.png>)
+![Alt text](<project_img/Account View.png>)
 
 - [x] Order stories by date - Image shows how the newest story is in storycard-1 and older stories are filtered based on date and time they were published
 ![Alt text](<project_img/Order stories by date.png>)
 
 - [x] Styled "new story" form - See 'A form for adding new stories' point above
 
-- [x] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter
-![ {{ When creating a story this form has had 'add image URL' added to it }} ]( {{ project_img\A form for adding new stories.png }} )
+- [x] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter - When creating a story this form has had 'add image URL' added to it
+![Alt text](<project_img/A form for adding new stories.png>)
 
-- [x] View stories by a particular author
-![ In view stories by a particular author it is possible to see all the stories published by the same author. You access this view by clicking the authors name ]( project_img\View stories by author.png )
+- [x] View stories by a particular author - In view stories by a particular author it is possible to see all the stories published by the same author. You access this view by clicking the authors name
+![Alt text](<project_img/View stories by author.png>)
 
-- [x] Account view so authors can see their profile information
-![ This is access by the 'my profile' line in the nav bar. The user can see their profile infromation including user name, last login and member since. ]( project_img\Account View.png )
+- [x] Account view so authors can see their profile information - This is access by the 'my profile' line in the nav bar. The user can see their profile infromation including user name, last login and member since.
+![Alt text](<project_img/Account View.png>)
 
 - [x] "Log-in" button only visible when no user is logged in/"Log-out" button
-only visible when a user *is* logged in
-![ In the nav bar different options are visible depending on if the user is logged in or logged out. It also says 'please log in to write a story' if you are not logged in, this changes once the user is logged in ]( C:\Users\Owner\she_codes\she_codes_news\project_img\Nav Menu when logged in.png, project_img\Nav Menu when logged out.png )
+only visible when a user *is* logged in - In the nav bar different options are visible depending on if the user is logged in or logged out. It also says 'please log in to write a story' if you are not logged in, this changes once the user is logged in
+![Alt text](<project_img/Nav Menu when logged in.png>)
+![Alt text](<project_img/Nav Menu when logged out.png>)
 
 
 ## Additional Features:
 - [x] Add the ability to update and delete stories (consider permissions - who
-should be allowed to update or and/or delete stories). - Django's UpdateView and DeleteView classes
-![When an author is logged in they can edit or delete their own stories, this option is not available of not logged in or the user is not the author ]( project_img\Edit delete story when logged in.png )
+should be allowed to update or and/or delete stories). - When an author is logged in they can edit or delete their own stories, this option is not available of not logged in or the user is not the author
+![Alt text](<project_img/Edit delete story when logged in.png>)
 
 - [x] Gracefully handle the error where someone tries to create a new story when
-they are not logged in.
-![ The page says 'please log in to write a story', if the user clicks that link it will take them to the log in page where they also have the option to create an account ]( project_img\log in link from create story.png, project_img\Log in to write a story.png,)
+they are not logged in - The page says 'please log in to write a story', if the user clicks that link it will take them to the log in page where they also have the option to create an account
+![Alt text](<project_img/Log in to write a story.png>)
+![Alt text](<project_img/log in link from create story.png>)
+
 
