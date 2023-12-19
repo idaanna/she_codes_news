@@ -1,3 +1,4 @@
+
 .story-card {
     margin: 2px;
     border: 1px solid antiquewhite;
@@ -63,6 +64,7 @@
     height: auto;
     margin-right: 5px;
     object-fit: contain;
+    border-radius: 20px;
 }
 
 #story-card-2 img,
@@ -72,6 +74,7 @@
     height: 100%;
     margin-right: 5px;
     object-fit: contain;
+    border-radius: 20px;
 }
 
 #all-stories {

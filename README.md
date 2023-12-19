@@ -33,7 +33,7 @@ Create account view shows the standard Django view and this is where the link 'c
 - [x] Add a field to the NewsStory model for an image url and use this image url rather than the default images provided in the starter - When creating a story this form has had 'add image URL' added to it
 ![Alt text](<project_img/A form for adding new stories.png>)
 
-- [x] View stories by a particular author - In view stories by a particular author it is possible to see all the stories published by the same author. You access this view by clicking the authors name
+- [x] View stories by a particular author - In view stories by a particular author it is possible to see all the stories published by the same author. You access this view by clicking the authors name.
 ![Alt text](<project_img/View stories by author.png>)
 
 - [x] Account view so authors can see their profile information - This is access by the 'my profile' line in the nav bar. The user can see their profile infromation including user name, last login and member since.
@@ -49,10 +49,19 @@ only visible when a user *is* logged in - In the nav bar different options are v
 - [x] Add the ability to update and delete stories (consider permissions - who
 should be allowed to update or and/or delete stories). - When an author is logged in they can edit or delete their own stories, this option is not available of not logged in or the user is not the author
 ![Alt text](<project_img/Edit delete story when logged in.png>)
+![Alt text](<project_img/Edit Story form.png>)
+![Alt text](<project_img/Delete story form.png>)
+
 
 - [x] Gracefully handle the error where someone tries to create a new story when
 they are not logged in - The page says 'please log in to write a story', if the user clicks that link it will take them to the log in page where they also have the option to create an account
 ![Alt text](<project_img/Log in to write a story.png>)
 ![Alt text](<project_img/log in link from create story.png>)
 
+- [x] When accessing the link My Profile and not logged in the user get an error message to log in
+![Alt text](<project_img/Log in to view My Profile.png>)
+
+## Future Features:
+I would like to add more styling. I forgot to add code in CSS which resets the browser stylesheet and I spent a lot of time trying to figure out where I was going wrong. I have now learnt a valuable lesson. 
+I would want to do more user testing to make sure all links are working etc 
 
