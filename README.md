@@ -1,6 +1,6 @@
 # Plus Resources: Django Project Starter
 
-# {{ Ida Eriksson }} - She Codes News Project
+# Ida Eriksson - She Codes News Project
 ## About This Project
 The purpose of this project was to create a She Codes News site in Django. The starter code was provided and then it was up to the cohort to build on this code and create their own site. Inspiration was drawn from a standard newssite but the purpose was to use Django to make it dynamic and give it some personality and flair. 
 ## How To Run This Code
@@ -22,7 +22,8 @@ The purpose of this project was to create a She Codes News site in Django. The s
 ![Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story ] ( ./ 
 project_img\Nav Menu when logged out.png.  )
 
-- [x]!Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article. ( ./project_img/Nav%20Menu%20when%20logged%20in.png )
+- [x]
+![ Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article. ]( ./project_img/Nav%20Menu%20when%20logged%20in.png )
 
 - [x]!Create account view shows the standard Django view and this is where the link 'create account' takes the user ( ./project_img/Creat%20Account%20View.png )
 
