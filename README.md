@@ -21,7 +21,7 @@ The purpose of this project was to create a She Codes News site in Django. The s
 - [x] Users app: create account, login, logout
 ![ Nav menu when logged out shows that there are links to creating an account as well as logging in for a new user or for a user that is not logged in. It tells the user that they have to log in/ create an account to post a story ]( project_img\Nav Menu when logged out.png.  )
 
-- [x]![ Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article ]( project_img\Nav Menu when logged in.png. )
+- [x]![ Nav menu when logged in displays the username, the log out option, 'my profile' and the option to post an article ]( ./project_img/Nav%20Menu%20when%20logged%20in.png )
 
 - [x]![ Create account view shows the standard Django view and this is where the link 'create account' takes the user ]( project_img\Creat Account View.png )
 
@@ -50,6 +50,6 @@ only visible when a user *is* logged in
 should be allowed to update or and/or delete stories). - Django's UpdateView and DeleteView classes
 ![When an author is logged in they can edit or delete their own stories, this option is not available of not logged in or the user is not the author ]( project_img\Edit delete story when logged in.png )
 
-[x] Gracefully handle the error where someone tries to create a new story when
+- [x] Gracefully handle the error where someone tries to create a new story when
 they are not logged in.
 ![ The page says 'please log in to write a story', if the user clicks that link it will take them to the log in page where they also have the option to create an account ]( project_img\log in link from create story.png, project_img\Log in to write a story.png,)
